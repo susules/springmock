@@ -47,7 +47,7 @@ public class StudentControllerTestMvc {
         when(studentDao.addStudent(any(Student.class))).thenReturn(list);
 
         MockHttpServletResponse response = mockMvc.perform(MockMvcRequestBuilders
-                .post("/addStudent", studentAyse)
+                .post("/student/addStudent", studentAyse)
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON)
                 .content("{\"name\": \"ayse\"}"))
